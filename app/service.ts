@@ -7,7 +7,7 @@ import {
 } from "./interface";
 import axios from "axios";
 
-const BASE_URL = "https://insyd-backend-18p8z0gi6-pankajs-projects-b994787a.vercel.app";
+const BASE_URL = "https://insyd-backend-88m9.onrender.com";
 
 export const getNotifications = async (
   userId: string

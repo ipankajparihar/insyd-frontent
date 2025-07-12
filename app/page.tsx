@@ -26,7 +26,7 @@ export default function Home() {
     loadFollowing();
     loadPosts();
 
-    const socket = new WebSocket("ws:https://insyd-backend-18p8z0gi6-pankajs-projects-b994787a.vercel.app");
+    const socket = new WebSocket("ws:https://insyd-backend-88m9.onrender.com");
     socket.onopen = () => socket.send(JSON.stringify({ userId }));
     socket.onmessage = (msg) => {
       const notif = JSON.parse(msg.data);
