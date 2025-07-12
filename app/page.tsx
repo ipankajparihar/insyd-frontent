@@ -93,11 +93,7 @@ export default function Home() {
                   <li className="py-3 sm:py-4" key={user}>
                     <div className="flex items-center">
                       <div className="shrink-0">
-                        <img
-                          className="w-8 h-8 rounded-full"
-                          src="../public/globe.svg"
-                          alt="image"
-                        />
+                        <div className="w-8 h-8 rounded-full"></div>
                       </div>
                       <div className="flex-1 min-w-0 ms-4">
                         <p className="text-sm font-medium text-gray-900 truncate ">
