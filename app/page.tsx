@@ -15,14 +15,7 @@ import { INotification, IPost } from "./interface";
 export default function Home() {
   const [notifications, setNotifications] = useState<INotification[]>([]);
   const [content, setContent] = useState("");
-  const [postId, setPostId] = useState("");
-  const [allUsers, setAllUsers] = useState([
-    "user_a",
-    "user_b",
-    "user_c",
-    "user_d",
-    "user_e",
-  ]);
+  const allUsers = ["user_a", "user_b", "user_c", "user_d", "user_e"];
   const [following, setFollowing] = useState<string[]>([]);
   const [posts, setPosts] = useState<IPost[]>([]);
 
@@ -70,8 +63,7 @@ export default function Home() {
 
   const handlePost = async () => {
     if (!content.trim()) return;
-    const res = await createPost({ userId, content });
-    setPostId(res.postId);
+    await createPost({ userId, content });
     setContent("");
     await loadPosts();
   };
